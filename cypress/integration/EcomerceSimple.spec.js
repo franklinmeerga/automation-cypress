@@ -11,7 +11,7 @@ describe('fazer uma compra de um produto x', () => {
     it ('fazer login', () => {
         // clicamos no botgão de login
         cy.get('.login').click();
-        cy.get('#email_create').type('franklinmeerga@ufps.edu.co');
+        cy.get('#email_create').type('franklinmeerga@ufps4.edu.co');
         
         // vamos escutar o post 200 que ele faz depois que ele clica no butão
         
@@ -33,7 +33,7 @@ describe('fazer uma compra de um produto x', () => {
 
        
 
-   
+        cy.get('#customer_firstname').type('franklin')
         cy.get('#customer_lastname').type('acevedo');
         cy.get('#passwd').type('12345');
         cy.get('#days').select('5');
@@ -43,13 +43,19 @@ describe('fazer uma compra de um produto x', () => {
 
         cy.get('#firstname').type('franklin');
         cy.get('#lastname').type("acevedo");
-        cy.get('#address1').type('abel dos santos 99');
+        cy.get('#address1').type('teste');
+        cy.get('#address2').type('address');
         cy.get('#city').type('são paulo');
         cy.get('#id_state').select('Alabama');
         cy.get('#postcode').type('12345');
         cy.get('#id_country').select('United States');
+        cy.get('#other').type('12345');
+        cy.get('#phone').type('1234567890');
         cy.get('#phone_mobile').type('1234567801');
-        cy.get('#alias').type('sei laaa');
+        cy.get('#alias').type('teste');
+
+       
+        cy.get('#submitAccount > span').click();
 
     })
 })
