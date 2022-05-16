@@ -25,6 +25,13 @@ describe('fazer uma compra de um produto x', () => {
 
 
         cy.get('#SubmitCreate > span').click();
+       
+        // cy.wait('@postemail').then((interception) => {
+
+        // })
+        cy.wait('@postemail').its('response.statusCode').should('eq', 200);
+
+       
 
    
         cy.get('#customer_lastname').type('acevedo');
