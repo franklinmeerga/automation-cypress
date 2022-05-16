@@ -21,7 +21,7 @@ describe('fazer uma compra de um produto x', () => {
         // atribuir uma rota a um alias (as()) e fazer uma validação
         // esperar com cy.wait()
 
-        //cy.intercept('**/index.php').as('postemail');
+        cy.intercept('**/index.php').as('postemail');
 
 
         cy.get('#SubmitCreate > span').click();
@@ -29,10 +29,10 @@ describe('fazer uma compra de um produto x', () => {
    
         cy.get('#customer_lastname').type('acevedo');
         cy.get('#passwd').type('12345');
-        cy.get('#days').select('1');
+        cy.get('#days').select('5');
         cy.get('#months').select('3');
         cy.get('#years').select('1992');
-
+        
 
         cy.get('#firstname').type('franklin');
         cy.get('#lastname').type("acevedo");
