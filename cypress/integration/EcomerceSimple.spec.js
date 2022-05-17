@@ -1,7 +1,8 @@
 /// <reference types="cypress" />
 
 //import _ from 'lodash';
-import ToolsProject from "../fixtures/random";
+import ToolsProject from "../fixtures/tools.mjs";
+//import ToolsProject from "../support/tools1";
 const number = new ToolsProject().randomnumber();
 
 
@@ -10,6 +11,7 @@ describe('fazer uma compra de um produto x', () => {
     // comando para visitar o site
     it ('visitar o site', () =>{
         cy.visit('http://automationpractice.com/index.php')
+    
     })
     
     it ('criar uma conta', () => {
