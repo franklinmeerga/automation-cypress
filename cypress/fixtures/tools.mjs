@@ -10,16 +10,21 @@ class ToolsProject {
         return Math.floor((Math.random() * 100) + 1);
     }
 
-    // randomemail() {
-    //     return `franklin${this.randomnumber}@gmail.com`
-    // }
+    randomemail() {
+        return `franklin${this.randomnumber()}@gmail.com`;
+    }
+
+    randompswd() {
+        return Math.random().toString(36).slice(-10);
+    }
 
     
 }
 
 //const name = new ToolsProject();
-//const a = new ToolsProject().randomemail()
-const b = new ToolsProject().randomnumber()
+const a = new ToolsProject().randomemail()
+//const b = new ToolsProject().randomnumber()
+const b = new ToolsProject().randompswd();
 
 console.log(b);
 

@@ -3,8 +3,9 @@
 //import _ from 'lodash';
 import ToolsProject from "../fixtures/tools.mjs";
 //import ToolsProject from "../support/tools1";
-const number = new ToolsProject().randomnumber();
-
+const number = new ToolsProject().randomnumber(); // gera um numero random
+const emailrandom =  new ToolsProject().randomemail(); // chama a função que cria um email random
+const senharandom =  new ToolsProject().randompswd();
 
 
 describe('fazer uma compra de um produto x', () => {
@@ -17,7 +18,8 @@ describe('fazer uma compra de um produto x', () => {
     it ('criar uma conta', () => {
         // clicamos no botgão de login
         cy.get('.login').click();
-        cy.get('#email_create').type(`franklinmeerga${number}@ufps.edu.co`);
+        //cy.get('#email_create').type(`franklinmeerga${number}@ufps.edu.co`);
+        cy.get('#email_create').type(emailrandom);
         
         // vamos escutar o post 200 que ele faz depois que ele clica no butão
         
@@ -41,7 +43,7 @@ describe('fazer uma compra de um produto x', () => {
 
         cy.get('#customer_firstname').type('franklin')
         cy.get('#customer_lastname').type('acevedo');
-        cy.get('#passwd').type('12345');
+        cy.get('#passwd').type(senharandom);
         cy.get('#days').select('5');
         cy.get('#months').select('3');
         cy.get('#years').select('1992');
