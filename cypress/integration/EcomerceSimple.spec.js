@@ -1,5 +1,9 @@
 /// <reference types="cypress" />
 
+//import _ from 'lodash';
+import ToolsProject from "../fixtures/random";
+const number = new ToolsProject().randomnumber();
+
 
 
 describe('fazer uma compra de um produto x', () => {
@@ -8,10 +12,10 @@ describe('fazer uma compra de um produto x', () => {
         cy.visit('http://automationpractice.com/index.php')
     })
     
-    it ('fazer login', () => {
+    it ('criar uma conta', () => {
         // clicamos no botgão de login
         cy.get('.login').click();
-        cy.get('#email_create').type('franklinmeerga@ufps4.edu.co');
+        cy.get('#email_create').type(`franklinmeerga${number}@ufps.edu.co`);
         
         // vamos escutar o post 200 que ele faz depois que ele clica no butão
         
