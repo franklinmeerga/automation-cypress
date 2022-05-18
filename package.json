@@ -1,12 +1,18 @@
 {
   "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.26.5",
     "@types/lodash": "^4.14.182",
     "cypress": "^9.6.1",
     "cypress-cucumber-preprocessor": "^4.3.1"
   },
+
   "dependencies": {
-    "lodash": "^4.17.21"
-    
-  },
-  "type": "commonjs"
+    "lodash": "^4.17.21"},
+  "type": "commonjs",
+  "scripts": {
+    "cy:run": "cypress run --config video=false --env allure=true",
+    "allure:generate": "allure generate allure-results ",
+    "allure:open": "allure open allure-report",
+    "allure:clear": "RMDIR /Q/S allure-results/allure-report"
+  }
 }
