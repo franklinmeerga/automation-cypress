@@ -34,10 +34,14 @@ describe('fazer uma compra de um produto x', () => {
 
         cy.get('#SubmitCreate > span').click();
        
-        // cy.wait('@postemail').then((interception) => {
-
-        // })
-        cy.wait('@postemail').its('response.statusCode').should('eq', 200);
+        //cy.wait('@postemail').its('response.statusCode').should('eq', 200); // isso aqui funciona
+        
+        cy.wait('@postemail').should((res) => {
+            expect(res.response.statusCode).to.equal(200);
+            //expect(res.response).has.property('token'); é bom fazer rolar isso aqui
+            expect(res.response.body.id).is.not.null;
+        })
+        //cy.get('@postemail').then(console.log); // isso aqui é muito interesante para ver o log
 
        
 
