@@ -5,7 +5,7 @@ import ToolsProject from "../fixtures/tools.mjs";
 //import ToolsProject from "../support/tools1";
 const number = new ToolsProject().randomnumber(); // gera um numero random
 const emailrandom =  new ToolsProject().randomemail(); // chama a função que cria um email random
-const senharandom =  new ToolsProject().randompswd();
+const senharandom =  new ToolsProject().randompswd(); // chama a função que cria uma senha random
 
 
 describe('fazer uma compra de um produto x', () => {
