@@ -1,0 +1,21 @@
+[ {
+  "uid" : "db31fd1ce532a6b4",
+  "name" : "criar uma conta",
+  "time" : {
+    "start" : 1652981126111,
+    "stop" : 1652981142190,
+    "duration" : 16079
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "846132a2ec29991",
+  "name" : "visitar o site",
+  "time" : {
+    "start" : 1652981122458,
+    "stop" : 1652981126100,
+    "duration" : 3642
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

@@ -1,0 +1,43 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "fazer uma compra de um produto x",
+    "children" : [ {
+      "name" : "visitar o site",
+      "uid" : "846132a2ec29991",
+      "parentUid" : "b69706f1b78bd837a99ce058f4231630",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652981122458,
+        "stop" : 1652981126100,
+        "duration" : 3642
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "criar uma conta",
+      "uid" : "db31fd1ce532a6b4",
+      "parentUid" : "b69706f1b78bd837a99ce058f4231630",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652981126111,
+        "stop" : 1652981142190,
+        "duration" : 16079
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "b69706f1b78bd837a99ce058f4231630"
+  } ]
+}

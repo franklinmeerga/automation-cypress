@@ -1,0 +1,64 @@
+{
+  "uid" : "846132a2ec29991",
+  "name" : "visitar o site",
+  "fullName" : "visitar o site",
+  "historyId" : "be465eefbd30f80b8f9c1f30d63cc016",
+  "time" : {
+    "start" : 1652981122458,
+    "stop" : 1652981126100,
+    "duration" : 3642
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "visit http://automationpractice.com/index.php",
+      "time" : {
+        "start" : 1652981122474,
+        "stop" : 1652981126099,
+        "duration" : 3625
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "fazer uma compra de um produto x"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "846132a2ec29991.json",
+  "parameterValues" : [ ]
+}

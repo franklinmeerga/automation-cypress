@@ -13,8 +13,9 @@
     "cy:run": "cypress run --config video=false --env allure=true",
     "allure:generate": "allure generate allure-results ",
     "allure:open": "allure open allure-report",
-    "allure:clear": "RMDIR /Q/S allure-results and allure-report",
-    "test": "npx npm-run-all allure:clear cy:run allure:generate",
+    "allure:clear-results": "RMDIR /Q/S allure-results",
+    "allure:clear-report": "RMDIR /Q/S allure-report",
+    "test": "npx npm-run-all allure:clear-results allure:clear-report cy:run allure:generate",
     "test2": "npx npm-run-all  cy:run allure:generate"
   }
 }
