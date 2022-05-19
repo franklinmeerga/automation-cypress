@@ -1,20 +1,20 @@
 [ {
-  "uid" : "db31fd1ce532a6b4",
+  "uid" : "54e73e1cf3dd91f4",
   "name" : "criar uma conta",
   "time" : {
-    "start" : 1652981126111,
-    "stop" : 1652981142190,
-    "duration" : 16079
+    "start" : 1652982077862,
+    "stop" : 1652982092727,
+    "duration" : 14865
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "846132a2ec29991",
+  "uid" : "d7e729df0c3d67f9",
   "name" : "visitar o site",
   "time" : {
-    "start" : 1652981122458,
-    "stop" : 1652981126100,
-    "duration" : 3642
+    "start" : 1652982072989,
+    "stop" : 1652982077854,
+    "duration" : 4865
   },
   "status" : "passed",
   "severity" : "normal"

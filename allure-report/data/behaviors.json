@@ -3,13 +3,13 @@
   "name" : "behaviors",
   "children" : [ {
     "name" : "visitar o site",
-    "uid" : "846132a2ec29991",
+    "uid" : "d7e729df0c3d67f9",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1652981122458,
-      "stop" : 1652981126100,
-      "duration" : 3642
+      "start" : 1652982072989,
+      "stop" : 1652982077854,
+      "duration" : 4865
     },
     "flaky" : false,
     "newFailed" : false,
@@ -20,13 +20,13 @@
     "parameters" : [ ]
   }, {
     "name" : "criar uma conta",
-    "uid" : "db31fd1ce532a6b4",
+    "uid" : "54e73e1cf3dd91f4",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1652981126111,
-      "stop" : 1652981142190,
-      "duration" : 16079
+      "start" : 1652982077862,
+      "stop" : 1652982092727,
+      "duration" : 14865
     },
     "flaky" : false,
     "newFailed" : false,

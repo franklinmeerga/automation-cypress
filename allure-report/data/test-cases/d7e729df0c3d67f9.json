@@ -1,12 +1,12 @@
 {
-  "uid" : "846132a2ec29991",
+  "uid" : "d7e729df0c3d67f9",
   "name" : "visitar o site",
   "fullName" : "visitar o site",
   "historyId" : "be465eefbd30f80b8f9c1f30d63cc016",
   "time" : {
-    "start" : 1652981122458,
-    "stop" : 1652981126100,
-    "duration" : 3642
+    "start" : 1652982072989,
+    "stop" : 1652982077854,
+    "duration" : 4865
   },
   "status" : "passed",
   "flaky" : false,
@@ -21,25 +21,25 @@
     "steps" : [ {
       "name" : "visit http://automationpractice.com/index.php",
       "time" : {
-        "start" : 1652981122474,
-        "stop" : 1652981126099,
-        "duration" : 3625
+        "start" : 1652982073004,
+        "stop" : 1652982077853,
+        "duration" : 4849
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "hasContent" : false,
-      "stepsCount" : 0,
+      "shouldDisplayMessage" : false,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false
+      "hasContent" : false,
+      "stepsCount" : 0
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "hasContent" : true,
-    "stepsCount" : 1,
+    "shouldDisplayMessage" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "hasContent" : true,
+    "stepsCount" : 1
   },
   "afterStages" : [ ],
   "labels" : [ {
@@ -59,6 +59,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "846132a2ec29991.json",
+  "source" : "d7e729df0c3d67f9.json",
   "parameterValues" : [ ]
 }
