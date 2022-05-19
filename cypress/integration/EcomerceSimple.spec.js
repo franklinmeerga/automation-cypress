@@ -1,6 +1,7 @@
 /// <reference types="cypress" />
 
 //import _ from 'lodash';
+
 import ToolsProject from "../fixtures/tools.mjs";
 //import ToolsProject from "../support/tools1";
 const number = new ToolsProject().randomnumber(); // gera um numero random
@@ -8,7 +9,7 @@ const emailrandom =  new ToolsProject().randomemail(); // chama a função que c
 const senharandom =  new ToolsProject().randompswd(); // chama a função que cria uma senha random
 
 
-describe('fazer uma compra de um produto x', () => {
+describe('fazer cadastro login', () => {
     // comando para visitar o site
     it ('visitar o site', () =>{
         cy.visit('http://automationpractice.com/index.php')
@@ -68,6 +69,48 @@ describe('fazer uma compra de um produto x', () => {
 
        
         cy.get('#submitAccount > span').click();
+
+    })
+})
+
+describe('LOGIN', () => {
+    // fazer login com email valido
+    it ('Login with e-mail and password validate', () => {
+        cy.visit('http://automationpractice.com/index.php?controller=authentication&back=addresses');
+        cy.get('#email').type('franklinmeerga@ufps4.edu.co');
+        cy.get('#passwd').type('12345');
+        cy.get('#SubmitLogin > span').click();
+    })
+})
+
+describe('MY ACCOUNT', () => {
+    // editar o adrees do perfil que foi criado
+    it.only ('edit an address', () => {
+        // faço login de novo pois ele sai da page assim que acabar e volta pra login de novo
+        cy.visit('http://automationpractice.com/index.php?controller=authentication&back=addresses');
+        cy.get('#email').type('franklinmeerga@ufps4.edu.co');
+        cy.get('#passwd').type('12345');
+        cy.get('#SubmitLogin > span').click();
+
+        // agora faço a edição do endereço
+        cy.get('.myaccount-link-list > :nth-child(3) > a > span').click();
+        cy.get('[href="http://automationpractice.com/index.php?controller=address&id_address=692812"] > span').click({ force: true }); //click({ multiple: true });
+        cy.get('#address1').clear().type('AddressValidate');
+        cy.get('#submitAddress > span').click();
+        //cy.get('.address_address1').contains('AddressValidate'); 
+        cy.get('.address_address1').invoke('text').then((s) => {
+            expect(s).to.string('AddressValidate');
+            expect(s).to.not.string('Address1');
+        })
+        
+
+    })
+    // editar  os dados pessoais - Genero F
+    it ('Edit personal data F', () => {
+
+    })
+    // editar os pessiais - Genero-M
+    it ('edit personal data -M', () => {
 
     })
 })
