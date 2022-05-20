@@ -8,6 +8,8 @@ const number = new ToolsProject().randomnumber(); // gera um numero random
 const emailrandom =  new ToolsProject().randomemail(); // chama a função que cria um email random
 const senharandom =  new ToolsProject().randompswd(); // chama a função que cria uma senha random
 
+import Login from '../support/pages/login/index';
+
 
 describe('fazer cadastro login', () => {
     // comando para visitar o site
@@ -75,11 +77,12 @@ describe('fazer cadastro login', () => {
 
 describe('LOGIN', () => {
     // fazer login com email valido
-    it ('Login with e-mail and password validate', () => {
-        cy.visit('http://automationpractice.com/index.php?controller=authentication&back=addresses');
-        cy.get('#email').type('franklinmeerga@ufps4.edu.co');
-        cy.get('#passwd').type('12345');
-        cy.get('#SubmitLogin > span').click();
+    it.only ('Login with e-mail and password validate', () => {
+
+        Login.acessarlogin();
+        Login.preencherlogin();
+        Login.clicarbotonlogin();
+        Login.validarloginacesso(); // posso validar com o status, outro jeito
     })
 })
 
