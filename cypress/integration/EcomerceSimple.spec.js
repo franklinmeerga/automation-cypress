@@ -17,9 +17,8 @@ describe('fazer cadastro login', () => {
         Register.visitarsite();
     
     })
+   
 
-    
-    
     it ('criar uma conta', () => {
         // clicamos no botgão de login
         Register.botaologinin();
@@ -43,7 +42,7 @@ describe('fazer cadastro login', () => {
         Register.validate_intercept_subimitemail
         //cy.get('@postemail').then(console.log); // isso aqui é muito interesante para ver o log
         Register.new_data_register();
-        
+
         Register.click_botao_new_data_register();
 
     })
