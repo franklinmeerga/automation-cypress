@@ -85,7 +85,7 @@ describe('LOGIN', () => {
 
 describe('MY ACCOUNT', () => {
     // editar o adrees do perfil que foi criado
-    it.only ('edit an address', () => {
+    it ('edit an address', () => {
         // faço login de novo pois ele sai da page assim que acabar e volta pra login de novo
         cy.visit('http://automationpractice.com/index.php?controller=authentication&back=addresses');
         cy.get('#email').type('franklinmeerga@ufps4.edu.co');
