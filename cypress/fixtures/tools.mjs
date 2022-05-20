@@ -28,4 +28,4 @@ const b = new ToolsProject().randompswd();
 
 console.log(b);
 
-export default ToolsProject;
+export default   ToolsProject;

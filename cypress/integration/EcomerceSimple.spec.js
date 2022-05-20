@@ -4,80 +4,54 @@
 
 import ToolsProject from "../fixtures/tools.mjs";
 //import ToolsProject from "../support/tools1";
-const number = new ToolsProject().randomnumber(); // gera um numero random
+//const number = new ToolsProject().randomnumber(); // gera um numero random
 const emailrandom =  new ToolsProject().randomemail(); // chama a função que cria um email random
 const senharandom =  new ToolsProject().randompswd(); // chama a função que cria uma senha random
 
 import Login from '../support/pages/login/index';
-
+import Register from '../support/pages/register/index';
 
 describe('fazer cadastro login', () => {
     // comando para visitar o site
     it ('visitar o site', () =>{
-        cy.visit('http://automationpractice.com/index.php')
+        Register.visitarsite();
     
     })
+
+    
     
     it ('criar uma conta', () => {
         // clicamos no botgão de login
-        cy.get('.login').click();
-        //cy.get('#email_create').type(`franklinmeerga${number}@ufps.edu.co`);
-        cy.get('#email_create').type(emailrandom);
-        
+        Register.botaologinin();
+
+        //cy.get('#email_create').type(emailrandom);
+        Register.emailregister();
         // vamos escutar o post 200 que ele faz depois que ele clica no butão
-        
         // routing
         // star do server com cy.server() mas no cypress 6.0 é cy.intercept()
         // criar uma rota com cy.route()
         // atribuir uma rota a um alias (as()) e fazer uma validação
         // esperar com cy.wait()
 
-        cy.intercept('**/index.php').as('postemail');
+        Register.intercept_status_subimitemail();
 
-
-        cy.get('#SubmitCreate > span').click();
+        Register.clicarbotao_subimitemail();
        
-        //cy.wait('@postemail').its('response.statusCode').should('eq', 200); // isso aqui funciona
-        
-        cy.wait('@postemail').should((res) => {
-            expect(res.response.statusCode).to.equal(200);
-            //expect(res.response).has.property('token'); é bom fazer rolar isso aqui
-            expect(res.response.body.id).is.not.null;
-        })
+        //expect(res.response).has.property('token'); é bom fazer rolar isso aqui
+      
+
+        Register.validate_intercept_subimitemail
         //cy.get('@postemail').then(console.log); // isso aqui é muito interesante para ver o log
-
-       
-
-        cy.get('#customer_firstname').type('franklin')
-        cy.get('#customer_lastname').type('acevedo');
-        cy.get('#passwd').type(senharandom);
-        cy.get('#days').select('5');
-        cy.get('#months').select('3');
-        cy.get('#years').select('1992');
+        Register.new_data_register();
         
-
-        cy.get('#firstname').type('franklin');
-        cy.get('#lastname').type("acevedo");
-        cy.get('#address1').type('teste');
-        cy.get('#address2').type('address');
-        cy.get('#city').type('são paulo');
-        cy.get('#id_state').select('Alabama');
-        cy.get('#postcode').type('12345');
-        cy.get('#id_country').select('United States');
-        cy.get('#other').type('12345');
-        cy.get('#phone').type('1234567890');
-        cy.get('#phone_mobile').type('1234567801');
-        cy.get('#alias').type('teste');
-
-       
-        cy.get('#submitAccount > span').click();
+        Register.click_botao_new_data_register();
 
     })
 })
 
 describe('LOGIN', () => {
     // fazer login com email valido
-    it.only ('Login with e-mail and password validate', () => {
+    it ('Login with e-mail and password validate', () => {
 
         Login.acessarlogin();
         Login.preencherlogin();
