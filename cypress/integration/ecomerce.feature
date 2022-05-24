@@ -23,9 +23,7 @@ Scenario Outline: ingresar varios email e senhas validas
     Examples:
         | email | senha |
         | franklinmeerga@ufps5.edu.co  | 12345  |:
-        | franklinmeerga@ufps4.edu.co  | 12345  |:
-        | franklinmeerga@ufps5.edu.co  | 12345  |:
-        | franklinmeerga@ufps5.edu.co  | 12345  |:
+
     
   
     
