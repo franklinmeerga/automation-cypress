@@ -50,7 +50,7 @@ describe('fazer cadastro login', () => {
 
 describe('LOGIN', () => {
     // fazer login com email valido
-    it ('Login with e-mail and password validate', () => {
+    it.only ('Login with e-mail and password validate', () => {
 
         Login.acessarlogin();
         Login.preencherlogin();

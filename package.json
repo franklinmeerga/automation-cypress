@@ -11,12 +11,16 @@
   "type": "commonjs",
   "scripts": {
     "cy:run": "cypress run --config video=false --env allure=true",
+    "cy:open": "cypress open --config video=false --env allure=true *",
     "allure:generate": "allure generate allure-results ",
     "allure:open": "allure open allure-report",
     "allure:clear-results": "RMDIR /Q/S allure-results",
     "allure:clear-report": "RMDIR /Q/S allure-report",
     "clear": "RMDIR /Q/S allure-results RMDIR /Q/S allure-report",
     "test": "npm-run-all allure:clear-results allure:clear-report cy:run allure:generate",
-    "test2": "npm-run-all  cy:run  allure:generate allure:open"
+    "test2": "npm-run-all  cy:run  allure:generate allure:open",
+    "test3": "npm-run-all allure:clear-results allure:clear-report cy:run allure:generate allure:open",
+    "test4": "npm-run-all clear cy:run allure:generate allure:open",
+    "test5": "npm-run-all  allure:generate allure:open"
   }
 }
