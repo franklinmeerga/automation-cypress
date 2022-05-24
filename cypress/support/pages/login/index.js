@@ -21,6 +21,12 @@ class Login {
         cy.get(elemento.password).type(data.psswd_user);
     }
 
+    preencherlogin_input(email_input, senha_input) {
+        cy.get(elemento.email).type(email_input);
+        cy.get(elemento.password).type(senha_input);
+    }
+    
+
     clicarbotonlogin() {
         cy.get(elemento.botonlogin).click();
     }
