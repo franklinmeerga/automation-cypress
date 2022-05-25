@@ -4,3 +4,6 @@ allure-report
 .png
 node_modules
 screenshots
+videos
+cucumber-json
+cucumber-report
