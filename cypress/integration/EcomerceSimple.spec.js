@@ -75,7 +75,7 @@ describe('fazer cadastro login', () => {
 
 describe('LOGIN', () => {
     // fazer login com email valido
-    it ('Login with e-mail and password validate', () => {
+    it.only ('Login with e-mail and password validate', () => {
         cy.visit('http://automationpractice.com/index.php?controller=authentication&back=addresses');
         cy.get('#email').type('franklinmeerga@ufps4.edu.co');
         cy.get('#passwd').type('12345');

@@ -1,0 +1,123 @@
+[
+  {
+    "description": "    como um usuario eu  quero fazer a compra de um produto qualquer",
+    "keyword": "Feature",
+    "name": "compra de um produto",
+    "line": 3,
+    "id": "compra-de-um-produto",
+    "tags": [],
+    "uri": "ecomerce.feature",
+    "elements": [
+      {
+        "id": "compra-de-um-produto;ingresar-varios-email-e-senhas-validas",
+        "keyword": "Scenario",
+        "line": 27,
+        "name": "ingresar varios email e senhas validas",
+        "tags": [
+          {
+            "name": "@focus",
+            "line": 18
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 20,
+            "name": "que o usuario esta na pagina de login",
+            "result": {
+              "status": "passed",
+              "duration": 6314000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "o usuario ingreasar o email \"franklinmeerga@ufps5.edu.co\" e o usuario ingressar a senha \"12345\"",
+            "result": {
+              "status": "passed",
+              "duration": 721000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "o usuario clicar no botao login",
+            "result": {
+              "status": "passed",
+              "duration": 2325000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "ele debe ser redirecionado pra pagina de my accout",
+            "result": {
+              "status": "passed",
+              "duration": 14000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "compra-de-um-produto;ingresar-varios-email-e-senhas-validas",
+        "keyword": "Scenario",
+        "line": 28,
+        "name": "ingresar varios email e senhas validas",
+        "tags": [
+          {
+            "name": "@focus",
+            "line": 18
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 20,
+            "name": "que o usuario esta na pagina de login",
+            "result": {
+              "status": "passed",
+              "duration": 1134000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "o usuario ingreasar o email \"franklinmeerga@ufps4.edu.co\" e o usuario ingressar a senha \"12345\"",
+            "result": {
+              "status": "passed",
+              "duration": 683000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "o usuario clicar no botao login",
+            "result": {
+              "status": "passed",
+              "duration": 2836000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "ele debe ser redirecionado pra pagina de my accout",
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

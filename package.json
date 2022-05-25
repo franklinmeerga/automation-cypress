@@ -16,7 +16,7 @@
     "allure:clear-results": "RMDIR /Q/S allure-results",
     "allure:clear-report": "RMDIR /Q/S allure-report",
     "clear": "RMDIR /Q/S allure-results RMDIR /Q/S allure-report",
-    "test": "npm-run-all allure:clear-results allure:clear-report cy:run allure:generate",
+    "test": "npm-run-all allure:clear-results allure:clear-report cy:run allure:generate allure:open",
     "test2": "npm-run-all  cy:run  allure:generate allure:open"
   }
 }
