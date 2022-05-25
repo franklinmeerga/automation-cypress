@@ -3,20 +3,33 @@
     "@shelex/cypress-allure-plugin": "^2.26.5",
     "@types/lodash": "^4.14.182",
     "cypress": "^9.6.1",
-    "cypress-cucumber-preprocessor": "^4.3.1"
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "multiple-cucumber-html-reporter": "^1.20.0"
   },
 
   "dependencies": {
-    "lodash": "^4.17.21"},
+    "lodash": "^4.17.21"
+  },
   "type": "commonjs",
   "scripts": {
     "cy:run": "cypress run --config video=false --env allure=true",
     "allure:generate": "allure generate allure-results ",
     "allure:open": "allure open allure-report",
+    "clear:json": "RMDIR ./cypress/cucumber-json",
+    "clear:report": "RMDIR  ./cypress/cucumber-report",
     "allure:clear-results": "RMDIR /Q/S allure-results",
     "allure:clear-report": "RMDIR /Q/S allure-report",
-    "clear": "RMDIR /Q/S allure-results RMDIR /Q/S allure-report",
-    "test": "npm-run-all allure:clear-results allure:clear-report cy:run allure:generate",
-    "test2": "npm-run-all  cy:run  allure:generate allure:open"
+    "clear:all": "npm-run-all allure:clear-results allure:clear-report",
+    "test": "npm-run-all allure:clear-results allure:clear-report cy:run allure:generate allure:open",
+    "test2": "npm-run-all  cy:run  allure:generate allure:open",
+    "cy:report2": "node ./cypress/report.js",
+    "test3": "npm-run-all cy:run & node ./cypress/report.js",
+    "cy:report": "cypress run"
+  },
+  "cypress-cucumber-preprocessor": {
+    "cucumberJson": {
+      "generate": true
+    },
+    "step_definitions": "cypress/support/steps/"
   }
 }

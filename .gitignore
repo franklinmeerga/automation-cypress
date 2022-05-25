@@ -1,4 +1,9 @@
 allure-results
 allure-report
 .mp4
+.png
 node_modules
+screenshots
+videos
+cucumber-json
+cucumber-report
