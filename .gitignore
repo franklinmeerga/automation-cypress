@@ -2,3 +2,6 @@ allure-results
 allure-report
 .mp4
 node_modules
+cucumber-report
+cucumber-json
+node_modules
